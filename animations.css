@@ -1,0 +1,64 @@
+/* Slide-In Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Applying the animation to the elements */
+.home-content, 
+.about, 
+.skills, 
+.projects, 
+.education, 
+.experience,
+.certifications, 
+.contact {
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Triggering the animation on hover */
+.home-content:hover, 
+.about:hover, 
+.skills:hover, 
+.projects:hover, 
+.education:hover, 
+.experience:hover ,
+.certifications:hover, 
+.contact:hover {
+    
+    transform: translateX(0);
+    animation: slideIn 1s ease-out forwards;
+}
+
+/* Delayed animations to trigger sequentially on hover */
+.home-content:hover {
+    animation-delay: 0.2s;
+}
+.about:hover {
+    animation-delay: 0.2s;
+}
+.skills:hover {
+    animation-delay: 0.2s;
+}
+.projects:hover {
+    animation-delay: 0.2s;
+}
+.education:hover {
+    animation-delay: 0.2s;
+}
+.experience:hover {
+    animation-delay: 0.2s;
+}
+.certifications:hover {
+    animation-delay: 0.2s;
+}
+.contact:hover {
+    animation-delay: 0.s;
+}

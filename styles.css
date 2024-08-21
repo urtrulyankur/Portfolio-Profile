@@ -1,0 +1,484 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Adjusted background color for better contrast */
+    color: #333;
+    text-align: center;
+}
+
+/* Container Style */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #8e71507a;
+    padding: 20px 10px;
+    border-bottom: 2px solid #0056b3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Navigation Links */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    margin: 0 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #0056b3;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    transition: color 0.3s ease;
+    font-style: italic;
+}
+
+ul li a:hover {
+    color: #003d7a;
+}
+
+ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #0056b3;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+ul li a:hover::after {
+    width: 100%;
+}
+
+/* Home Section */
+.home {
+    background-color: #b7a7bb63;
+    padding: 60px 20px;
+    overflow: hidden;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.slideshow-container {
+    flex: 1;
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+.content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.btn {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    background-color: #004494;
+}
+
+/* About Section */
+.about {
+    background-color: #b7a7bb63;
+    padding: 60px 20px;
+    text-align: left; /* Left-align the text */
+}
+
+/* Skills Section */
+.skills {
+    background-color: #b7a7bb63;
+    padding: 60px 20px;
+}
+
+.skills h2 {
+    font-size: 36px;
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.skill-item {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+    text-align: left;
+    position: relative;
+    padding-left: 30px;
+}
+
+.skill-item .icon {
+    font-size: 24px;
+    color: #0056b3;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Education Section */
+.education {
+    background-color: #b7a7bb63;
+    padding: 60px 20px;
+    text-align: left;
+}
+
+.education h2 {
+    font-size: 36px;
+    color: #0056b3;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.education-item {
+    margin-bottom: 20px;
+}
+
+.education-item h3 {
+    font-size: 24px;
+    color: #0056b3;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.education-item .icon {
+    font-size: 24px;
+    color: #0056b3;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.education-item p {
+    font-size: 18px;
+    margin: 5px 0;
+    padding-left: 30px;
+}
+
+/* Certification Section */
+.certifications {
+    background-color: #b7a7bb63;
+    padding: 60px 20px;
+}
+
+.certifications h2 {
+    font-size: 36px;
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.certification-item {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+    text-align: left;
+    position: relative;
+    padding-left: 30px;
+}
+
+.certification-item .icon {
+    font-size: 24px;
+    color: #0056b3;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Projects Section */
+.projects {
+    background-color: #b7a7bb63;
+    padding: 60px 20px;
+    text-align: left;
+}
+
+.projects h2 {
+    font-size: 36px;
+    color: #0056b3;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.project-item {
+    margin-bottom: 20px;
+}
+
+.project-item h3 {
+    font-size: 24px;
+    color: #0056b3;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.project-item .icon {
+    font-size: 24px;
+    color: #0056b3;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.project-item p {
+    font-size: 18px;
+    margin: 5px 0;
+    padding-left: 30px;
+}
+
+/* Experience Section */
+.experience {
+    background-color: #b7a7bb63;
+    padding: 60px 20px;
+    text-align: left;
+}
+
+.projects h2 {
+    font-size: 36px;
+    color: #0056b3;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+ul.experience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.experience-list li {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+    position: relative;
+    padding-left: 30px;
+}
+
+ul.experience-list li .icon {
+    font-size: 24px;
+    color: #0056b3;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* Footer */
+footer {
+    background-color: #0056b3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Slideshow Animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .slideshow-container, .content {
+        width: 100%;
+    }
+
+    .skills .skill-item {
+        font-size: 16px;
+    }
+
+    .skills .icon {
+        font-size: 20px;
+    }
+}
+/* About Me Section */
+.about {
+    background-color: #b7a7bb63;
+    padding: 60px 20px;
+    text-align: left; /* Left-align the entire section */
+}
+
+.about h2 {
+    font-size: 36px;
+    color: #0056b3;
+    margin-bottom: 20px;
+    text-align: center; /* Keep the heading centered */
+    padding-left: 30px; /* Align with the other section headers */
+    position: relative;
+}
+
+.about h2::before {
+    color: #0056b3;
+    position: absolute;
+    left: 0; /* Adjust position */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px; /* Adjust size */
+}
+.experience h2 {
+    font-size: 36px;
+    color: #0056b3;
+    margin-bottom: 20px;
+    text-align: center; /* Keep the heading centered */
+    padding-left: 30px; /* Align with the other section headers */
+    position: relative;
+}
+/* Contact Section */
+.contact {
+    background-color: #b7a7bb63;
+    padding: 60px 20px;
+    text-align: left;
+}
+
+.contact h2 {
+    font-size: 36px;
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.contact .icon {
+    font-size: 20px;
+    color: #0056b3;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Specific Icons */
+.contact .icon-email::before {
+    content: "\2709"; /* Unicode for email icon */
+}
+
+.contact .icon-linkedin::before {
+    content: "\f08c"; /* Unicode for LinkedIn icon (FontAwesome) */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.contact .icon-phone::before {
+    content: "\260E"; /* Unicode for phone icon */
+}
+
+/* Styling for Links */
+.contact a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Example Usage */
+.contact p.email .icon-email { /* Specific for email */
+    color: #dd4b39;
+}
+.contact p.linkedin .icon-linkedin { /* Specific for LinkedIn */
+    color: #0077b5;
+}
+.contact p.phone .icon-phone { /* Specific for phone */
+    color: #34a853;
+}
